@@ -1,0 +1,44 @@
+
+#all-posts {
+    text-align: center;
+    padding: 1rem;
+}
+.posts{
+    display: flex;
+    padding: .5rem;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: space-evenly;
+}
+.posts article{
+    margin: 1.5rem;
+    padding: .5rem;
+    width: 300px;
+}
+.posts article:hover{
+    background: linear-gradient(to bottom, #FF6347 0%, #F05438 100%);
+    border-radius: 2%;
+    animation:post_hover 1.3s ease-in;
+
+}
+
+.post>a:hover{
+    color: whitesmoke;
+
+}
+
+    
+
+@keyframes post_hover {
+    0%{
+        transform: scale(1);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+
+    }
+    50%{
+        transform: scale(1.05);
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+    }
+    100%{transform: scale(1);}
+}
+

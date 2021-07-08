@@ -1,0 +1,18 @@
+{% if active_page %}
+  <nav>
+    <div class="logo"><a href="">Mass' Website</a></div>
+    <ul class="nav-items">
+      <li><a href="{% url "home" %}">Portofolio</a></li>
+      <li><a href="">Works</a></li>
+      <li><a href="">Services</a></li>
+      <li id="blog"><a href="{% url "blog" %}">Blog</a></li>
+    </ul>
+  </nav>
+{% else %}
+  <nav>
+    <ul class="nav-items">
+      <div class="logo"><a href="{% url "blog" %}">Mass' Blog</a></div>
+      <li><a href="{% url "posts" %}">All Posts</a></li>
+    </ul>
+  </nav>
+{% endif %}

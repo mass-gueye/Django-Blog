@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css_files %}
+        <link rel="stylesheet" href="{% static 'homepage.styles.css' %}" />
+    {% endblock %}
+    {% block page_title %}Website{% endblock %}
+ {% block content %}
+
+{% include "partials/navbar.html" with active_page="homepage" %}
+
+<section class="welcome">
+
+<h1>Welcome to my website</h1>
+<p>Hello i'm mass a fullstack web developer.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis assumenda quo totam quisquam accusantium, dolorum, nulla delectus tempora quos praesentium modi nesciunt omnis cupiditate alias asperiores dolorem distinctio libero porro expedita. Cum, laudantium quibusdam! Quo assumenda ipsa quasi natus aspernatur molestiae nisi tempora laudantium, ex architecto ullam sit vitae voluptate sint similique, quibusdam error nobis dolor ea, recusandae fugit. Assumenda nostrum asperiores quae magni illo voluptatum alias ad aliquid. Vero vitae quo iusto, architecto consequuntur veritatis tenetur doloribus autem dolorem facere officiis fugiat laboriosam accusamus ut doloremque. Temporibus, expedita nam dicta quisquam molestias ea doloribus sunt voluptates soluta, maxime similique quo quia incidunt illo dolor, esse omnis facilis aspernatur fuga excepturi hic. Placeat voluptatem eligendi id maxime perferendis non quibusdam itaque nostrum iusto dolores magnam porro, laborum eius ut aliquid veniam nulla numquam molestiae sint mollitia, dolor voluptate obcaecati ipsa. Recusandae, molestias nihil veniam cum modi earum optio sapiente odio quis, explicabo cumque, reprehenderit voluptatum? Accusamus, sit non. Dignissimos, autem sequi ratione dolores mollitia nisi molestias explicabo amet voluptas error sed quidem nam aperiam! Porro similique itaque esse earum minus numquam animi fuga et incidunt iste dolores sed distinctio ea dolore amet ipsam, quos rem saepe odio rerum cupiditate. Alias dignissimos harum sit consequuntur totam officia vero sint ad iusto odio exercitationem, libero magni nisi nam. Minima, ab rerum repellendus similique tempore, perspiciatis ut at reiciendis placeat soluta laudantium, maiores dolorem commodi eius ratione! Eligendi ipsam minima velit fugiat a recusandae quo, excepturi hic cum laboriosam doloremque rerum culpa repellat!</p>
+</section>
+
+{% endblock %}

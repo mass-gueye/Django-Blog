@@ -1,0 +1,54 @@
+:root{
+    --gen-background:linear-gradient(360deg, #fd686f, #f8657e);
+    --glass-background:linear-gradient(360deg, rgba(253, 104, 111,0.8), rgba(248, 101, 126,0.8));
+}
+
+
+nav{
+    background: var(--gen-background);
+    display: flex;
+    align-items: center;
+    /* padding: .5rem; */
+}   
+
+.nav-items{
+    margin: 0;
+    padding: 1rem 5rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+}
+.logo{
+    font-size: 2rem;
+    width: 30%;
+    padding-left: 1.5rem;
+}
+
+.nav-items a, .logo>a{
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+}
+#blog{
+    background: white;
+    padding: .5rem;
+    border-radius: 16%;
+}
+#blog>a{
+    color:rgb(255, 101, 152);
+}
+
+section{
+    opacity: .8;
+    background-color: white;
+    background: var(--glass-background);
+    margin: 3rem 8rem;
+    padding: 2rem;
+    border-radius: 8px 8px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 2px 2px 10px rgb(255, 210, 225);
+}

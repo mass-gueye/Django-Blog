@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+    
+    {% block css_files %}
+                <link rel="stylesheet" href="{% static 'blog.styles.css' %}" />
+    {% endblock %}
+    
+   {% block page_title %}Blog{% endblock %}
+
+
+    {% block content %}
+        {% include "partials/navbar.html" %}
+
+        <section id="welcome">
+            <header>
+                <img src="{% static 'images/masse.jpg' %}" alt="`my image" class="my-img">
+                <h2>MASS' BLOG</h2>
+            </header>
+            <p>Sup' guys i'm Mass and i love to blog about <strong>Tech</strong> and the world!</p>
+        </section>    
+        <section id="latest-post">
+            <h2>My Latest Thoughts</h2>
+            <ul>
+                {% include 'post.html' with blog_page="starting_page" %}
+            </ul>
+        </section>
+        <section id="about">
+            <h2>What I Do ?</h2>
+            <p>I love programming and i enjoy exploring technologies</p>
+            <p>My main goal is to keep on growing as a developer - and if i could help you do the same i'd be very happy!</p>
+        </section>
+    {% endblock %}

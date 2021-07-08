@@ -1,0 +1,35 @@
+{% load static %}
+
+{% if not blog_page %}
+
+{% for post in posts %}
+    <li>
+    <article class="post">
+        <a href="{%url 'post_details' details=post.slug%}">
+            <img src="{{post.image.url}}" alt=post image" class="post_image">
+            <div class="post__content">
+                <h3>{{post.title|title}}</h3>
+                <p>{{ post.content|truncatechars:500 }}</p>
+                <span>published at {{post.pub_date|date}} by {{ post.author }}<span>
+            </div>
+        </a>
+    </article>
+</li>
+{% endfor %}
+{% else %}
+
+<li>
+    <article class="post">
+        <a href="{% url 'post_details' details=latest_post.title|slugify %}">
+            <img src="{{latest_post.image.url}}" alt=post image" class="post_image">
+            <div class="post__content">
+                <h3>{{latest_post.title|title}}</h3>
+                <p>{{ latest_post.content|truncatechars:500 }}</p>
+                <span>published at <time>{{latest_post.pub_date|date}}</time> by <address>{{ content.author }}</address><span>
+
+            </div>
+        </a>
+    </article>
+</li>
+
+{% endif %}
